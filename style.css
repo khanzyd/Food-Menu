@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(240, 248, 255);
+}
+
+.headcontainer{
+    height: 19vmax;
+}
+
+.heading{
+    font-size: 5vmax;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    padding: 2vmax 1vmax;
+    color: rgb(204, 143, 29);
+}
+
+.menubtns{
+    text-align: center;
+    height: auto;
+}
+
+.menu-btn{
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 1vmax;
+    font-weight: 600;
+    margin: 7px 9px;
+    color: rgb(204, 143, 29);
+    border: 2px solid rgb(204, 143, 29) ;
+}
+
+.menu-btns:hover{
+    background-position: 0 100%;
+    background-color: rgb(204, 143, 29);
+    color: whitesmoke;
+
+}
+
+.maincontainer{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7vmax 4vmax;
+    flex-wrap: wrap;
+    margin: 2vh 0;
+}
+
+.menu-items{
+    min-width: 42vw;
+    max-width: 45vw;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+
+.img-container{
+    height: 12vmax;
+    border-radius: 9px;
+    min-width: 20vw;
+}
+
+.img-container img{
+    border-radius: 9px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item-desc{
+    display: flex;
+    padding: 0.5vmax 1vmax;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.item-desc .desc{
+    font-size: 1.5vmax;
+    max-height: 18vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    font-weight: 500;
+    border-top: 2px solid rgb(230, 152, 7);
+    margin-top: 1vh;
+    padding: 1.5vmax;
+}
+
+.item-desc .desc::-webkit-scrollbar{
+    display: none;
+}
+
+.item-heading{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    padding: 0 0.5vmax;
+    font-size: 1.4vmax;
+    gap: 6px;
+}
+
+
+.item-heading .item-price{
+
+    color: rgb(203, 135, 10);
+}
+
+
+@media (max-width: 1225px){
+    .item-desc .desc{
+        max-height: 10vh;
+    }
+}
+
+@media (max-width: 750px){
+
+
+    .maincontainer{
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .menu-items{
+        min-width: 80vw;
+        padding: 3vmax;
+    }
+
+    .maincontainer .img-container{
+        min-width: 16vh;
+        /* 30vw */
+        height: 16vh;
+    }
+
+     
+    .item-desc{
+        min-width: 50vw;
+    }
+
+    .item-desc .item-heading{
+        width: 100%;
+        font-size: 0.65em;
+    }
+
+
+    .item-desc .desc{
+        width: 100%;
+        max-height: 10vh;
+        font-size: 0.7em;
+    }
+}
+
+
+@media (max-width: 425px){
+   
+    .maincontainer .img-container{
+        min-width: 12vh;
+        height: 12vh;
+    }
+}
